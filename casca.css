@@ -3,8 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-  
+
 }
 /*css pro menu vertical*/
 body{
@@ -74,7 +73,7 @@ list-style: none;
     background-color: #9295A0;
     border: none;
 }
-.busca{
+.topo-elements input{
         transform: translateY(-20%);
         display: flex;
         align-items: end;
@@ -102,14 +101,82 @@ list-style: none;
     margin-bottom: 1%;
 }
 
-@media(max-width: 900px) {
+/*@media(max-width: 900px) {
    .topo{
     width: 800px;
     background-color: rgb(243, 66, 205);
    }
     }
-
+*/
 .corpo{
     background-color:black;
     display: flex ;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*estilizando o carrossel*/
+
+.carrossel{
+    margin: 0 auto;
+    width:  800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide-elements{
+    width: 400%;
+    height: 40px;
+    display: flex;
+}
+
+.slide-elements input{
+    display: none;        /*escondeu os inputs*/
+}
+
+.slide-first{
+    width: 40%;
+    position: relative;
+}
+
+.slide img{
+    border-radius: 30px;
+    transform: translateY(7%);
+}
+
+.slide-first img{
+    width: 800px;
+}
+
+/*estilizando os botões*/
+.manual-nav{
+    position: absolute;
+    width: 800px;
+    margin-top: 265px;
+    display: flex;
+    justify-content: center;
+}
+
+.botao-manual{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: 0.5s;
+}
+
+.botao-manual:not(:last-child){
+    margin-right: 40px
+}
+
+.botao-manual:hover{
+    background-color: white;
+}
+
+#bolinha1:checked ~ .slide-first{
+  margin-left:0;
+}
+
+#bolinha2:checked ~ .slide-first{
+  margin-left:-25%;
 }

@@ -10,22 +10,51 @@
 </head>
 <body>
         <div class="topo">
-            <div class="topo-elements">
-           
-              <h1>4life</h1>
-        <div class="busca">
-              <input type="text" name="pesquisar" placeholder="O que está procurando?">
-        </div>
-          
+        <div class="topo-elements">
+            <h1>4life</h1>
+            <input type="text" name="pesquisar" placeholder="O que está procurando?">
+            <img id="carrinho" src="carrinho.jpg">
+            <img id="lupa" src="lupa1.png">  
+            <img id="heart" src="coracao.png">
         </div> 
-        <img id="carrinho" src="carrinho.jpg">
-         <img id="lupa" src="lupa1.png">  
-         <img id="heart" src="coracao.png">
-        <script src="https://kit.fontawesome.com/6859528c9f.js" crossorigin="anonymous"></script>
-       
-        <section class="corpo">
-            <h1>oi</h1>
-        </section>
         </div>
+
+        <div class="corpo">
+            <div class="carrossel">
+                <div class="slide-elements">
+                <!--radios buttons-->
+                <input type="radio" name="bolinha" id="bolinha1">
+                <input type="radio" name="bolinha" id="bolinha2">
+                <input type="radio" name="bolinha" id="bolinha3">
+
+                <!--slide images-->
+                <div class="slide-first">
+                    <img src="image1.webp">
+                </div>
+                <div class="slide">
+                    <img src="image2.webp">
+                </div>
+                <div class="slide">
+                    <img src="image3.webp">
+                </div>
+
+                <!--navigation auto-->
+                <div class="navegacao">
+                    <div class="nav-bolinha1"></div>
+                    <div class="nav-bolinha2"></div>
+                    <div class="nav-bolinha3"></div>
+                </div>
+                </div>
+                <div class="manual-nav">
+                    <label for="bolinha1" class="botao-manual"></label>
+                    <label for="bolinha2" class="botao-manual"></label>
+                    <label for="bolinha3" class="botao-manual"></label>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js">
+
+        </script>
 </body>
 </html>
