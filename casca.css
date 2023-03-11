@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
+}
+/*css pro menu vertical*/
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+#vertical{
+    height: 100vh;
+    background-color: rgb(204, 194, 194);
+    width: 15vw;
+    padding: 20px;
+}
+
+#vertical ul{
+padding: 0px;
+margin: 0px;
+list-style: none;
+
+}
+
+#vertical ul li {
+    margin-bottom: 30%;
+    margin-left: 1px;
+}
+
+#vertical ul li a{
+    padding: 2px 10px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: rgb(31, 28, 28);
+    justify-content: space-around;
+}
+
+#vertical ul li a:hover{
+    background-color: beige;
+    border-bottom: 5px ;
+    
+}
+
+/*css do lobby do site*/
+
+.topo{
+    background-color: #351534;
+    width: 1450vw;
+    height: 156px;
+    display: flex;
+    align-items: center;
+}
+
+.topo-elements{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.topo h1{
+    font-family: 'Kumar One', cursive;
+    margin-left: 250px;
+    color: #BE4FC0;
+    width: 162px;
+}
+
+.topo input{
+    width: 426px;
+    height: 39px;
+    border-radius: 30px;
+    background-color: #9295A0;
+    border: none;
+}
+.busca{
+        transform: translateY(-20%);
+        display: flex;
+        align-items: end;
+}
+
+#carrinho{
+    width: 40px;
+    height: 40px;
+    margin-left: 90%;
+    position: absolute;
+    margin-bottom: 1%;
+}
+
+#lupa{
+    width: 2em;
+    transform: translateY(-20%);
+    margin-left: 1em;
+}
+
+#heart{
+    width:1.8em;
+    height: 1.8em;
+    margin-left: 94%;
+    position: absolute;
+    margin-bottom: 1%;
+}
+
+@media(max-width: 900px) {
+   .topo{
+    width: 800px;
+    background-color: rgb(243, 66, 205);
+   }
+    }
+
+.corpo{
+    background-color:black;
+    display: flex ;
+}
