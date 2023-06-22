@@ -84,19 +84,28 @@ ul {
 
 .in {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     color: white;
     font-family: helvetica;
     font-size: 20px;
+    gap: 5px;
+}
+
+.in span {
+    width: 27vh;
 }
 
 .img {
-    border: 1px solid red;
-    min-width: 26vh;
-    min-height: 32vh;
-    max-width: 26vh;
-    max-height: 32vh;
+    border: 1px solid rgb(255, 0, 0);
+    max-width: 27vh;
+    max-height: 33vh;
     display: flex;
+}
+
+.img img {
+    min-width: 26vh;
+    min-height: 32vh;   
 }
 
 .set {
@@ -146,18 +155,26 @@ ul {
     background-color: #6b1368;
 }
 
-/* Estilos responsivos */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos responsivos 
 @media screen and (max-width: 768px) {
     .all {
         padding-top: 5vh;
-    }
-
-    .img {
-        min-width: 40vh;
-        min-height: 50vh;
-        max-width: 40vh;
-        max-height: 50vh;
     }
 
     .set {
@@ -181,3 +198,4 @@ ul {
         height: 50px;
     }
 }
+*/

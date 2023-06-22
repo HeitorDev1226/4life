@@ -45,7 +45,7 @@ var_dump($id_prod);
                 </a>
             </div>
             <div class="logo">
-                <a href="#">
+                <a href="../principal_pages/cadastrado/cadastrado.php">
                     <p>4life</p>
                 </a>
             </div>
@@ -116,7 +116,13 @@ var_dump($id_prod);
                     </form>
                 </div>
                 <div class="fav">
-                    <input type="submit" value="adicionar aos favoritos">
+                <form action="../favoritos/favoritos.php" method="POST" class="fav">
+                <input type="hidden" name="id" value="<?php echo $id_prod; ?>">
+                        <input type="hidden" name="preco" value="<?php echo $preco; ?>">
+                        <input type="hidden" name="nome" value="<?php echo $nome; ?>">
+                        <input type="hidden" name="foto" value="<?php echo $foto; ?>">
+                    <input type="submit" name="adicionar_favorito" value="adicionar aos favoritos">
+                    </form>
                 </div>
             </div>
         </div>

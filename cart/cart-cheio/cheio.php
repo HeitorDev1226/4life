@@ -79,7 +79,7 @@ if ($sql_query && mysqli_num_rows($sql_query) > 0) {
             foreach ($_SESSION['carrinho'] as $index => $produto) {
                 echo '<div>';
                 echo '<div class="img">';
-                echo '<img src="' . $produto['foto'] . '" alt="imagem de uma roupa" style="width: 200vh; height: 38vh;">';
+                echo '<img src="' . $produto['foto'] . '" alt="imagem de uma roupa">';
                 echo '</div>';
                 echo '<div class="in">';
                 echo '<span>Nome: ' . $produto['nome'] . '</span>';

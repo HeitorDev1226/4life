@@ -86,7 +86,7 @@ function verificarCredenciais($email, $senha) {
             </div>
             <span id="bem">BEM-VINDO!</span>
             <span id="novo">Novo no site? <a href="user/cadastro.php" id="regi">Registre-se</a></span>
-            <form class="dados" method="POST" action="login.php">
+            <form class="dados" method="POST" action="login.php"  onsubmit="return validarFormulario()">
                 <div class="a">
                     <label>E-mail:</label>
                     <input type="email" name="email" placeholder="E-mail">
@@ -104,5 +104,25 @@ function verificarCredenciais($email, $senha) {
             </form>
          </div>
     </div>
+    <script>
+        function validarFormulario() {
+         var email = document.getElementsByName('email')[0].value;
+         var senha = document.getElementsByName('senha')[0].value;
+         var regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/;
+
+         var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+         // Validar o campo Senha
+  if (!senha.match(regexSenha)) {
+    isValid = false;
+    alert('Por favor, digite uma senha válida (mínimo de 6 caracteres, com pelo menos uma letra maiúscula e um número).');
+  }
+         var isValid = true;
+         if (!email.match(regexEmail)) {
+    isValid = false;
+    alert('Por favor, digite um e-mail válido.');
+  }
+  return isValid;
+}
+    </script>
 </body>
 </html>
