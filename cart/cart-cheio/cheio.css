@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+ul {
+    background-color: #6b1368;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    min-height: 20vh;
+}
+
+.set-voltar {
+    display: flex;
+    align-self: center;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.set-voltar img {
+    height: 40px;
+}
+
+.carrinho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carrinho span {
+    font-size: 40px;
+    font-family: 'Kumar One', sans-serif;
+    color: white;
+}
+
+.carrinho img {
+    height: 45px;
+    display: flex;
+    align-self: center;
+}
+
+.logo {
+    display: flex;
+    align-self: center;
+    font-size: 40px;
+    font-family: 'Kumar One', sans-serif;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.logo a {
+    color: #b341af;
+    text-decoration: none;
+}
+
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 10vh;
+    gap: 5vh;
+}
+
+.in {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: helvetica;
+    font-size: 20px;
+}
+
+.img {
+    border: 1px solid red;
+    min-width: 26vh;
+    min-height: 32vh;
+    max-width: 26vh;
+    max-height: 32vh;
+    display: flex;
+}
+
+.set {
+    display: flex;
+    align-self: center;
+    padding-left: 8%;
+    cursor: pointer;
+}
+
+.set img:active {
+    background-color: #6b1368;
+}
+
+.set img {
+    height: 50px;
+    background-color: #b341af;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.confirm span {
+    font-size: 35px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.confirm button {
+    background-color: #b341af;
+    width: 250px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-family: helvetica;
+    cursor: pointer;
+}
+
+.confirm button:active {
+    background-color: #6b1368;
+}
+
+/* Estilos responsivos */
+
+@media screen and (max-width: 768px) {
+    .all {
+        padding-top: 5vh;
+    }
+
+    .img {
+        min-width: 40vh;
+        min-height: 50vh;
+        max-width: 40vh;
+        max-height: 50vh;
+    }
+
+    .set {
+        padding-left: 5%;
+    }
+
+    .set img {
+        height: 40px;
+    }
+
+    .confirm {
+        padding-top: 5vh;
+    }
+
+    .confirm span {
+        font-size: 25px;
+    }
+
+    .confirm button {
+        width: 200px;
+        height: 50px;
+    }
+}

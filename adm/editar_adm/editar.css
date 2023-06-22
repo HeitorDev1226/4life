@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    min-width: 732px;
+    min-height: 742px;
+    background-color: #551753;
+    color: white;
+    border-radius: 20px;
+}
+
+.container input {
+    width: 260px;
+    height: 45px;
+    border-radius: 5px;
+    outline: 0;
+    padding: 3px;
+}
+
+.all {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.criar {
+    font-size: 48px;
+    font-family: Helvetica;
+}
+
+.criar img {
+    height: 55px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.criar span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    font-family: helvetica;
+    font-size: 13px;
+}
+.form span{
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: Helvetica;
+    font-size: 24px;
+}
+.dados{
+    display: flex;
+    flex-direction: column;
+}
+.endereco{
+    display: flex;
+    flex-direction: column;
+}
+
+.dados input {
+    margin-bottom: 13px;
+}
+
+.endereco input {
+    margin-bottom: 13px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 7vh;
+}
+
+#logi {
+    width: 497px;
+    height: 92px;
+    left: 455px;
+    background: #351534;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 35px;
+}
+
+#logi:hover {
+    cursor: pointer;
+}

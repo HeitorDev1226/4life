@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.container {
+    height: 470px;
+    width: 370px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    font-family: Arial, Helvetica;
+    background-color: #551753;
+
+}
+
+.voltar {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.voltar img {
+    height: 30px;
+}
+
+.container span {
+    font-family: helvetica;
+    text-align: center;
+}
+
+#bem {
+    font-size: 42px;
+}
+
+#novo {
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+#novo a {
+    text-decoration: none;
+    color: #BE4FC0;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dados input {
+    padding: 4px;
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.a {
+    padding: 10px;
+}
+
+.but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.but button {
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    font-family: helvetica;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.img img{
+    height: 50px;
+}

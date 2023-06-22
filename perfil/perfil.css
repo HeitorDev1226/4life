@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+ }
+  
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    padding-top: 6vh;
+}
+
+.container {
+    height: 550px;
+    width: 600px;
+    display: flex;
+    background-color: #5c1e5a;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.set-voltar img{
+    height: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.name_id {
+    padding-top: 30px;
+}
+
+.dados_do_usuario {
+    padding-top: 40px;
+}
+
+.endereco {
+    height: 280px;
+    width: 350px;
+    background-color: #aaa;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px #242424;
+    padding-left: 5px;
+    padding-top: 20px;
+    font: normal 16pt helvetica;
+    color: #242424;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.name_id {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome {
+    color: white;
+    font: normal 15pt arial;
+}

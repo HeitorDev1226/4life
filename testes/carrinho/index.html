@@ -1,0 +1,26 @@
+<!-- Página espera.php -->
+<!-- Exibição dos pedidos pendentes -->
+<div class="pedidos">
+  <div class="pedido">
+    <p>Nome do usuário: João</p>
+    <p>Horário do pedido: 2023-05-25 14:30:00</p>
+    <p>ID do pedido: 1</p>
+    <button class="btn-aceitar" data-pedido-id="1">Aceitar</button>
+    <button class="btn-negar" data-pedido-id="1">Negar</button>
+  </div>
+  <!-- Outros pedidos... -->
+</div>
+
+<!-- Modal para capturar motivo de negação -->
+<div id="modal-negar" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Negar Pedido</h2>
+    <form id="form-negar">
+      <textarea name="motivo" placeholder="Digite o motivo para negar o pedido"></textarea>
+      <button type="submit">Negar</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>

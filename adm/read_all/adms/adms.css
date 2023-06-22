@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.container {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: Helvetica;
+    width: 360px;
+    height: 300px;
+    background-color: #551753;
+}
+
+.container span {
+    font-size: 21px;
+    font-family: Helvetica;
+    padding-bottom: 10px;
+}
+
+.voltar {
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.voltar img {
+    height: 35px;
+}
+
+.criar span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.opcoes label {
+    font-size: 11px;
+}
+
+.opcoes input {
+    display: flex;
+    width: 250px;
+    outline: 0;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+#id {
+    height: 38px;
+}
+
+.but {
+    padding-top: 20px;
+}
+
+.but button {
+    padding: 20px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}

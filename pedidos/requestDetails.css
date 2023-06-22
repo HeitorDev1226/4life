@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   }
+   
+   
+   body {
+    background-color: #242424;
+   }
+   
+   
+   .all {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+   }
+   
+   
+   .container {
+    width: 350px;
+    height: 380px;
+    background-color: rgb(163, 22, 182);
+    border-radius: 5px;
+    color: white;
+   }
+   
+   
+   .cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 10px;
+   }
+   
+   
+   .img {
+    padding-left: 5px;
+    padding-top: 5px;
+   }
+   .img img {
+    height: 40px;
+   }
+   
+   
+   .detalhes {
+    color: white;
+    font: normal 16pt arial;
+   }
+   
+   
+   .nome {
+    font: normal 14pt arial;
+   }
+   
+   
+   .itens {
+    font: normal 14pt arial;
+   }
+   
+   
+   .preco {
+    font: normal 14pt arial;
+   }
+   
+   
+   .comprador {
+    font: normal 14pt arial;
+   }
+   
+   
+   .vendedor {
+    font: normal 14pt arial;
+   }
+   
+   

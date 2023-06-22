@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;;
+    user-select: none;
+}
+
+header {
+    height: 110px;
+    background-color: #5c1e5a;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding-top: 33px;
+    padding-left: 15px;
+}
+
+.head li {
+    list-style: none;
+}
+
+.set-voltar img {
+    height: 40px;
+}
+
+.logo a{
+    font-family: 'Kumar One', sans-serif;
+    font-size: 24pt;
+    color: #a94fa6;
+    text-decoration: none;
+}
+
+.usuario {
+    font-family: 'Kumar One', sans-serif;
+    font-size: 23pt;
+    color: white;
+    user-select: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.src {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.src input {
+    padding: 5px;
+    width: 240px;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(247, 0, 255, 0.1);
+    border-radius: 2px;
+}
+
+.src button {
+    background-color: #242424;
+    border: none;
+}
+
+.src button img {
+    height: 20px;
+    cursor: pointer;
+}
+
+.pedidos {
+    color: white;
+    font: normal 15pt helvetica;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    user-select: none;  
+}
+
+.pedidos ul {
+    padding-top: 20px;
+    display: flex;
+    list-style: none;
+    height: 350px;
+    width: 550px;
+    background-color: #5c1359;
+    border-radius: 4px;
+    font-family: arial;
+    font-size: bold;
+    flex-direction: column;
+}
+
+
+.opcoes {
+    display: flex;
+    gap: 30px;
+}
+
+.inform {
+    width: 250px;
+    background-color: #944091;
+    box-shadow: 3px 3px 6px black;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.inform:active {
+    box-shadow: none
+}
+
+.bloq {
+    width: 200px;
+    background-color: #944091;
+    box-shadow: 3px 3px 6px black;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bloq:active {
+    box-shadow: none
+}
+
+#h4{
+    color: white;
+}
