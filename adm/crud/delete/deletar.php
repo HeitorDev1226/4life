@@ -10,6 +10,6 @@ mysqli_prepare($ponte, $sql);
 if ($ponte->query($sql) === TRUE) {
   echo "Registro deletado com sucesso!";
 } else {
-  echo "Erro ao deletar registro: " . $ponte->error;
+  echo "Erro ao deletar registros: " . $ponte->error;
 }
 ?>
