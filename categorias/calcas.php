@@ -1,7 +1,6 @@
 <?php
    require ('../database/conexao.php');
     include 'processa.php';
-    require('../database/conexao.php');
     
     // Consulta para obter os produtos da categoria "Blusas"
     $sql = "SELECT DISTINCT * FROM produtos WHERE fk_categorias_id = 5";
@@ -15,7 +14,7 @@
        <link rel="icon" href="../assets/logo.png">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Blusas</title>
+       <title>calças</title>
        <link rel="stylesheet" href="categ.css">
        <link rel="stylesheet" href="https://kit.fontawesome.com/6859528c9f.css" crossorigin="anonymous">
        <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
@@ -34,7 +33,7 @@
                    </a>
                </li>
                <li class="categ">
-                   <p>Blusas</p>
+                   <p>calças</p>
                </li>
            </ul>
        </header>

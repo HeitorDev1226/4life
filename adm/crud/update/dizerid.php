@@ -17,7 +17,7 @@ require('../../../database/conexao.php');
     <div class="cont">
         <div class="container">
             <div class="voltar">
-                <a href="../../../principal_pages/adm/adm.php">
+                <a href="../read/menu/menu.php">
                     <img src="../../../assets/seta_voltar.png">
                 </a>
             </div>

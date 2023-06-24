@@ -12,24 +12,24 @@
     <div class="cont">
         <div class="container">
             <div class="voltar">
-                <a href="../../../principal_pages/adm/adm.php">
-                    <img src="../../../assets/seta_voltar.png">
+                <a href="../../../../principal_pages/adm/adm.php">
+                    <img src="../../../../assets//seta_voltar.png">
                 </a>           
             </div>
             <div class="titulo">
                 <span>OPÇÕES DO ADM</span>
             </div>
             <div class="opcoes">
-                <a href="../create/create.php">
+                <a href="../../create/create.php">
                     <button>ADICIONAR PRODUTOS</button>
                 </a>
-                <a href="../delete/delete.php">
+                <a href="../../delete/delete.php">
                     <button>DELETAR PRODUTOS</button>
                 </a>
-                <a href="../read/read.php">
+                <a href="../read.php">
                     <button>CONSULTAR PRODUTOS</button>
                 </a>
-                <a href="../update/dizerid.php">
+                <a href="../../update/dizerid.php">
                     <button>ALTERAR PRODUTOS</button>
                 </a>
             </div>

@@ -53,10 +53,12 @@ $result = mysqli_query($ponte, $sql);
                <div class="img">
                    <img src="<?php echo $fotoprod; ?>" alt="imagem do produto">
                </div>
+               <a href="../../produtos/produto.php?id=<?php echo $produto_id; ?>">
                <div class="in">
                    <span>Nome: <?php echo $nome; ?></span>
                    <span>Preço: R$ <?php echo $preco; ?></span>
                </div>
+               </a>
            </div>
        </div>
        <?php } ?>

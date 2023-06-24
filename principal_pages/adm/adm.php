@@ -27,7 +27,7 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="../../adm/crud/menu/menu.php">
+                                <a href="../../adm/crud/read/menu/menu.php">
                                     <p>AÇÕES DO ADMINISTRADOR</p>
                                 </a>
                             </li>
@@ -98,28 +98,40 @@
             <p>Blusas</p>
         </div>
         <div class="categ">
-            <a href="../../categorias/calcas.php" class="catego">
+    <a href="calcas.php" class="catego">  
+        <img src="../../../assets/calcas.jpg" alt="Imagem de calças">
+    </a>
+</div>
+<div class="categorias">
+        <div class="categ">
+            <a href="../../cadastro/login.php" class="catego">
+                <img src="../../assets/blusas.jpg">
+            </a>
+            <p>BLUSAS</p>
+        </div>
+        <div class="categ">
+            <a href="../../cadastro/login.php" class="catego">
                 <img src="../../assets/calças.jpg">
             </a>
-            <p>Calça</p>
+            <p>CALÇA</p>
         </div>
         <div class="categ">
-            <a href="../../categorias/conjuntos.php" class="catego">
+            <a href="../../cadastro/login.php" class="catego">
                 <img src="../../assets/conjunto.png">
             </a>
-            <p>Conjunto</p>
+            <p>CONJUNTO</p>
         </div>
         <div class="categ">
-            <a href="../../categorias/roupfeminina.php" class="catego">
+            <a href="../../cadastro/login.php" class="catego">
                 <img src="../../assets/roupa-feminina.png">
             </a>
-            <p>Roupa-feminina</p>
+            <p>ROUPA-FEMININA</p>
         </div>
         <div class="categ">
-            <a href="../../categorias/jaquetas.php" class="catego">
+            <a href="../../cadastro/login.php" class="catego">
                 <img src="../../assets/jaquetas.jpg">
             </a>
-            <p>Jaqueta</p>
+            <p>JAQUETA</p>
         </div>
     </div>
     <div class="fotos">

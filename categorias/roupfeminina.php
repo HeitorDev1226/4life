@@ -34,7 +34,7 @@
                    </a>
                </li>
                <li class="categ">
-                   <p>Blusas</p>
+                   <p>Roupas femininas</p>
                </li>
            </ul>
        </header>

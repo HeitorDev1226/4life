@@ -17,7 +17,9 @@
     $foto = $produto['foto_prod'];
     // Resto da lógica para exibir os detalhes do produto...
     } else {
-    echo "Produto não encontrado!";
+        echo '<script>alert("Produto não encontrado!");</script>';
+       sleep(2);
+       header("location: ../read/menu/menu.php");
     }
 
     $sql_catg = "SELECT fk_categorias_id FROM produtos WHERE id = $id_produto";
@@ -39,7 +41,7 @@
     <div class="cont">
         <div class="container">
             <div class="voltar">
-                <a href="../menu/menu.php">
+                <a href="../read/menu/menu.php">
                     <img src="../../../assets/seta_voltar.png">
                 </a>           
             </div>

@@ -1,5 +1,5 @@
 <?php
-    require('../../../database/conexao.php');
+require('../../../database/conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
     <div class="cont">
         <div class="container">
             <div class="voltar">
-                <a href="../menu/menu.php"><img src="../../../assets/seta_voltar.png"></a>
+                <a href="../read/menu/menu.php"><img src="../../../assets/seta_voltar.png"></a>
             </div>
             <span>ADICIONAR PRODUTO</span>
             <form class="form" action="adicionar.php" method="POST" enctype='multipart/form-data'>
@@ -24,14 +24,13 @@
                     <label>COR:</label>
                     <select name="cor_prod">
                         <?php
-                        $sql = "SELECT cor_prod FROM produtos WHERE id IN(3, 4, 5)";
+                        $sql = "SELECT cor_prod FROM produtos WHERE id IN(65, 102, 104, 105, 106, 107)";
                         $query = mysqli_query($ponte, $sql);
                         while ($cor = mysqli_fetch_array($query)) {
-                            $codigo = $cor['cor_prod'];
                             $nome = $cor['cor_prod'];
-                            if ($codigo !== null) {
+                            if ($nome !== null) {
                         ?>
-                             <option name="cor_prod" value="<?php echo $codigo ?>"><?php echo $nome ?></option>
+                             <option value="<?php echo $nome ?>"><?php echo $nome ?></option>
                         <?php
                             }
                         }
@@ -49,7 +48,7 @@
                     <label>TAMANHO:</label>
                     <select name="tamanho_prod">
                         <?php
-                        $sql = "SELECT DISTINCT tamanho_prod FROM produtos ORDER BY tamanho_prod";
+                        $sql = "SELECT tamanho_prod FROM produtos WHERE id IN(65, 108, 111, 112, 113, 114)";
                         $query = mysqli_query($ponte, $sql);
                         while ($tamanho = mysqli_fetch_array($query)) {
                             $nome = $tamanho['tamanho_prod'];
@@ -74,17 +73,18 @@
                         $query = mysqli_query($ponte, $sql);
                         while ($catg = mysqli_fetch_array($query)) {
                             $codigo = $catg['id'];
-                            $nome = $catg['nome_catg']; ?>
-                            <option value="<?php echo $codigo ?>"> <?php echo $nome ?></option>";
-                        <?php } ?>
-                        
+                            $nome = $catg['nome_catg'];
+                            ?>
+                            <option value="<?php echo $codigo ?>"> <?php echo $nome ?></option>
+                        <?php
+                        }
+                        ?>
                     </select>
                     <!--enviar-->
                     <input type="submit" value="adicionar">
                 </div>
             </form>
         </div>
-    </div>
     </div>
     <script src="form.js"></script>
 </body>

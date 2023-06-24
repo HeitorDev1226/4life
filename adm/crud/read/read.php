@@ -17,7 +17,7 @@ require('../../../database/conexao.php');
     <div class="cont">
         <div class="container">
             <div class="voltar">
-                <a href="../menu/menu.php">
+                <a href="../read/menu/menu.php">
                     <img src="../../../assets/seta_voltar.png">
                 </a>
             </div>
@@ -25,11 +25,12 @@ require('../../../database/conexao.php');
             <form method="POST" action="ler.php" class="opcoes">
                 <label>ID DO PRODUTO</label>
                 <input type="number" id="id" name="id_prod">
-        </div>
-        <div class="but">
+                <div class="but">
             <input type="submit" value="CONSULTAR">
         </div>
         </form>
+        </div>
+        
     </div>
 </body>
 

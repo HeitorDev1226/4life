@@ -56,16 +56,16 @@ if ($sql_query && mysqli_num_rows($sql_query) > 0) {
 <body>
     <ul>
         <li class="set-voltar">
-            <a href="../../principal_pages/cadastrado/cadastrado.php">
+            <a href="../principal_pages/cadastrado/cadastrado.php">
                 <img src="../assets/seta_voltar.png" alt="seta de voltar">
             </a>
         </li>
         <li class="favoritos">
-            <span>favoritos de compras</span>
-            <img src="../../assets/favoritos.png" alt="favoritos">
+            <span>FAVORITOS</span>
+            <img src="../assets/coracao.png" alt="favoritos">
         </li>
         <li class="logo">
-            <a href="../../principal_pages/cadastrado/cadastrado.php">
+            <a href="../principal_pages/cadastrado/cadastrado.php">
                 <span>4life</span>
             </a>
         </li>
@@ -105,14 +105,70 @@ if ($sql_query && mysqli_num_rows($sql_query) > 0) {
                 }
             }
         }
+        if (isset($_POST['adicionar_favorito'])) {
+            $id_produto = $_POST['id'];
+            $nome = $_POST['nome'];
+            $preco = $_POST['preco'];
+            $foto = $_POST['foto'];
+        
+            $item = [
+                'id' => $id_produto,
+                'nome' => $nome,
+                'preco' => $preco,
+                'foto' => $foto
+            ];
+        
+            if (!isset($_SESSION['favoritos'])) {
+                $_SESSION['favoritos'] = [];
+            }
+        
+            // Verificar se o produto já está na lista de favoritos
+            $produto_existente = false;
+            foreach ($_SESSION['favoritos'] as $favorito) {
+                if ($favorito['id'] == $id_produto) {
+                    $produto_existente = true;
+                    break;
+                }
+            }
+        
+            // Adicionar o produto apenas se não estiver na lista de favoritos
+            if (!$produto_existente) {
+                $_SESSION['favoritos'][] = $item;
+            }
+        
+            header('Location: ../favoritos/favoritos.php');
+            exit();
+        }
+        
         ?>
     </div>
-    <div class="cont">
-        <form class="confirm" action="../../pedidos/waitPay.php" method="GET">
-            <span>CLIQUE AQUI PARA CONFIRMAR ITENS</span>
-            <input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
-            <input type="submit" value="CONFIRMAR">
+    <div class="all">
+        <form action="../cart/cart-cheio/cheio.php" method="post">
+            <?php
+            // Loop através dos produtos favoritos
+            foreach ($_SESSION['favoritos'] as $index => $produto) {
+                // Exibir os detalhes do produto
+                echo '<div>';
+                echo '<div class="img">';
+                echo '<img src="' . $produto['foto'] . '" alt="imagem de uma roupa" style="width: 200vh; height: 38vh;">';
+                echo '</div>';
+                echo '<div class="in">';
+                echo '<span>Nome: ' . $produto['nome'] . '</span>';
+                echo '<span>Preço: R$ ' . $produto['preco'] . '</span>';
+                echo '</div>';
+                echo '</div>';
+                echo '<hr>';
+
+                // Adicionar campo oculto com o ID do produto
+                echo '<input type="hidden" name="ids_produtos[]" value="' . $produto['id'] . '">';
+            }
+            ?>
+
+            <!-- Botão para adicionar todos os produtos ao carrinho -->
+            <input type="submit" name="ad_carrinho" value="Adicionar ao Carrinho">
         </form>
     </div>
+
+    <!-- Rodapé e outros elementos HTML -->
 </body>
 </html>

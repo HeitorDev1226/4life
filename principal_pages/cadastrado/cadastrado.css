@@ -265,3 +265,43 @@ body {
    width: 50px;
    cursor: pointer;
 }
+
+.all12 {
+   padding-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 50px;
+   padding-left: 20px;
+}
+
+.img {
+   border: 1px solid rgb(255, 0, 0);
+   max-width: 26vh;
+   max-height: 32vh;
+}
+
+.img img {
+   max-width: 26vh;
+   max-height: 32vh;
+   min-width: 26vh;
+   min-height: 32vh;
+}
+
+.image {
+   display: flex;
+   flex-direction: row; /* Adicionado para exibir as imagens na horizontal */
+}
+
+.in {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   font-size: 20px;
+   font-family: helvetica;
+   color: white;
+   gap: 5px;
+}
+
+.in span {
+   width: 26vh;
+}

@@ -15,12 +15,11 @@ if (isset($_GET['id'])) {
         $tamanho = $dados['tamanho_prod'];
         $foto = $dados['foto_prod'];
         $cor = $dados['cor_prod'];
-        echo "tudo ok até aqui";
+      
     }
 } else {
     echo "falha: " . $ponte->error;
 }
-var_dump($id_prod);
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +69,7 @@ var_dump($id_prod);
                     <div class="tamanhos">
                         <select class="select" name="select">
                             <?php
-                            $sql = "SELECT cor_prod FROM produtos WHERE id IN(3, 4, 5)";
+                            $sql = "SELECT cor_prod FROM produtos WHERE id IN(65, 102, 104, 105, 106, 107)";
                             $query = mysqli_query($ponte, $sql);
                             while ($info_cor = mysqli_fetch_array($query)) {
                                 $codigo = $info_cor['cor_prod'];

@@ -33,6 +33,7 @@
             </li>
         </ul>
     </header>
+    
     <div class="vist">
         <p>você esta navegando como visitante: Cadastrar-se para ter acesso aos nossos produtos</p>
     </div>

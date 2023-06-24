@@ -11,7 +11,7 @@
     <div class="cont">
         <div class="container">
             <div class="voltar">
-                <a href="../menu/menu.php">
+                <a href="../read/menu/menu.php">
                     <img src="../../../assets/seta_voltar.png">
                 </a>           
             </div>

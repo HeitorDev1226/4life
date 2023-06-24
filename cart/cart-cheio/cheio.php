@@ -31,6 +31,14 @@ if (isset($_POST['limpar_carrinho'])) {
     exit();
 }
 
+if (!empty($_SESSION['carrinho'])) {
+    $idsProdutos = array_column($_SESSION['carrinho'], 'id');
+    $idsProdutosString = implode(',', $idsProdutos);
+
+    // Salve a string de IDs dos produtos onde desejar (por exemplo, em uma variável de sessão)
+    $_SESSION['ids_produtos'] = $idsProdutosString;
+}
+
 $sql_user = "SELECT id FROM usuarios ORDER BY id DESC LIMIT 1";
 $sql_query = mysqli_query($ponte, $sql_user);
 $id_user = null;
@@ -39,11 +47,22 @@ if ($sql_query && mysqli_num_rows($sql_query) > 0) {
     $dados_query = mysqli_fetch_assoc($sql_query);
     $id_user = $dados_query['id'];
 }
+
+if (!empty($_SESSION['ids_produtos'])) {
+    $idsProdutosString = $_SESSION['ids_produtos'];
+    $idsProdutosArray = explode(',', $idsProdutosString);
+
+    echo 'IDs dos produtos: ';
+    foreach ($idsProdutosArray as $idProduto) {
+        echo $idProduto . ' ';
+    }
+}
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" href="../../assets/logo.png">
     <meta charset="UTF-8">
@@ -53,6 +72,7 @@ if ($sql_query && mysqli_num_rows($sql_query) > 0) {
     <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
     <title>Carrinho</title>
 </head>
+
 <body>
     <ul>
         <li class="set-voltar">
@@ -95,24 +115,24 @@ if ($sql_query && mysqli_num_rows($sql_query) > 0) {
             echo '<form action="cheio.php" method="post">';
             echo '<input type="submit" name="limpar_carrinho" value="Limpar Carrinho">';
             echo '</form>';
-
-            if (!empty($idsProdutos)) {
-                foreach ($idsProdutos as $idProduto) {
-                    $quantidade = array_count_values(array_column($_SESSION['carrinho'], 'id'))[$idProduto];
-                    for ($i = 0; $i < $quantidade; $i++) {
-                        echo '<input type="hidden" name="ids_produtos[]" value="' . $idProduto . '">';
-                    }
-                }
-            }
         }
         ?>
     </div>
-    <div class="cont">
-        <form class="confirm" action="../../pedidos/waitPay.php" method="GET">
-            <span>CLIQUE AQUI PARA CONFIRMAR ITENS</span>
-            <input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
-            <input type="submit" value="CONFIRMAR">
-        </form>
-    </div>
+    <?php if (!empty($_SESSION['carrinho'])) : ?>
+        <div class="cont">
+            <form class="confirm" action="requestChest.php" method="GET">
+                <span>CLIQUE AQUI PARA CONFIRMAR ITENS</span>
+                <input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
+                <input type="hidden" name="id_prod" value="<?php echo $idsProdutosString; ?>">
+                <input type="submit" value="CONFIRMAR">
+            </form>
+            <?php
+            unset($_SESSION['carrinho']);
+            ?>
+        </div>
+    <?php else : ?>
+    <?php endif; ?>
+
 </body>
+
 </html>

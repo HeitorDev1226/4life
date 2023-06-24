@@ -98,24 +98,16 @@ function verificarCredenciais($email, $senha) {
                 <div class="but">    
                    <input type="submit" value="logar">
                 </div>
-                <div class="img">
-                    <img src="../assets/google.png">
-                </div>
             </form>
          </div>
     </div>
     <script>
         function validarFormulario() {
          var email = document.getElementsByName('email')[0].value;
-         var senha = document.getElementsByName('senha')[0].value;
-         var regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/;
 
          var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
          // Validar o campo Senha
-  if (!senha.match(regexSenha)) {
-    isValid = false;
-    alert('Por favor, digite uma senha válida (mínimo de 6 caracteres, com pelo menos uma letra maiúscula e um número).');
-  }
+
          var isValid = true;
          if (!email.match(regexEmail)) {
     isValid = false;
